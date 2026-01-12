@@ -393,7 +393,7 @@
   opacity: 0.9;
 }
 
-.btn-daftar {
+.btn-daftar-cta {
   background-color: #ffffff;
   color: #1565c0;
   border-radius: 50px;
@@ -404,10 +404,12 @@
     background-color 0.25s ease;
 }
 
-.btn-daftar:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
-  background-color: #f8f9fa;
+@media (hover: hover) {
+  .btn-daftar-cta:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    background-color: #f8f9fa;
+  }
 }
 
 /* faq */
@@ -460,6 +462,30 @@
   padding: 0 0 1.5rem 0 !important;
   line-height: 1.6;
   font-size: 0.95rem;
+}
+
+/* footer */
+.footer-section {
+  background-color: #010d1f;
+}
+
+.footer-logo {
+  width: 40px;
+  height: 35px;
+}
+
+.footer-desc {
+  max-width: 300px;
+  line-height: 1.6;
+}
+
+.footer-list li {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.text-secondary {
+  color: #adb5bd !important;
 }
 
 /* Responsif */
@@ -767,9 +793,28 @@
     padding: 0 10px;
   }
 
-  .btn-daftar {
+  .btn.btn-daftar-cta {
+    background-color: #ffffff !important;
+    color: #1565c0 !important;
+
     font-size: 1rem;
     padding: 12px 36px;
+    border-radius: 50px;
+
+    transition: transform 0.15s ease, box-shadow 0.15s ease,
+      background-color 0.15s ease;
+  }
+
+  .btn.btn-daftar-cta:active {
+    background-color: #f8f9fa !important;
+    transform: scale(0.96);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+  }
+
+  .btn.btn-daftar-cta:focus,
+  .btn.btn-daftar-cta:focus-visible {
+    background-color: #ffffff !important;
+    outline: none;
   }
 
   /* faq */
@@ -798,5 +843,42 @@
     width: 1.5rem;
     height: 1.5rem;
     background-size: 1.5rem;
+  }
+
+  /* footer */
+  .footer-section {
+    text-align: left;
+  }
+
+  .footer-section .row {
+    gap: 2rem;
+  }
+
+  .footer-logo {
+    width: 36px;
+    height: auto;
+  }
+
+  .footer-desc {
+    max-width: 100%;
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .footer-list li {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .footer-section h5 {
+    margin-bottom: 1.25rem;
+  }
+
+  .footer-section .col-lg-4:first-child {
+    align-items: flex-start;
+  }
+
+  .footer-section .col-lg-4:first-child p.small {
+    margin-top: 2rem !important;
   }
 }
